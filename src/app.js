@@ -16,5 +16,6 @@ console.log(clientFeedback('I love it'));
 console.log(clientSubmit('Submitted'));
 
 
-const template = React.createElement('p', {}, 'here');
+//const template = React.createElement('p', {}, 'here');
+const template = <p>Here I am baby</p>
 ReactDOM.render(template, document.getElementById('app'));

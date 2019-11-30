@@ -1,11 +1,11 @@
 export const clientTitle = (clientTitle) => {
-    return clientTitle;
+    return 'Title: ' + clientTitle;
 }
 
 export const clientName = (clientName) => {
-    return clientName;
+    return 'Name: ' + clientName;
 }
 
 export const clientDoB = (clientDoB) => {
-    return clientDoB;
+    return 'Date of Birth: ' + clientDoB;
 }

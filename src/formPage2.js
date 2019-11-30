@@ -1,15 +1,15 @@
 export const clientLocation = (clientLocation) => {
-    return clientLocation;
+    return 'Location: ' + clientLocation;
 }
 
 export const clientDaT = (clientDaT) => {
-    return clientDaT;
+    return 'Date and Time: ' + clientDaT;
 }
 
 export const clientFeedback = (clientFeedback) => {
-    return clientFeedback;
+    return 'Feedback: ' + clientFeedback;
 }
 
 export const clientSubmit = (clientSubmit) => {
-    return clientSubmit;
+    return 'Submit: ' + clientSubmit;
 }
