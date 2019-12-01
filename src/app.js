@@ -24,7 +24,22 @@ const visibilityStageThreeToggle = () => { visibilityStageThree = !visibilitySta
 
 
 // Function to check to see if the client details are updating
-const checkDetails = () => { console.log(clientDetails)};
+const checkDetails = () => { 
+
+    // Function that converts arrays into objects
+    const convertToObject = (item) => {
+        const amendObject = {};
+        for (let i = 0; i < item.length; ++i)
+            amendObject[i] = item[i];
+        return amendObject;
+    }
+    // Convert clientDetails array into an object
+    const clientObject = convertToObject(clientDetails);
+    
+    // Converted JSON file using stringify
+    let clientObjectJSON = JSON.stringify(clientObject);
+    console.log('This is the string JSON object ' + clientObjectJSON)
+};
 
 
 // Function formOne submisson
