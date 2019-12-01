@@ -132,9 +132,22 @@ const render = () => {
 
         </div>
     );
+    console.log(document)
     ReactDOM.render(jsx, document.getElementById('app'));
 };
 
+// Function renders an item to the footer
+const renderFooter = () => {
+    const jsxFooter = (
+        <div>
+            <p>I read the instructions</p>
+        </div>
+    );
+    ReactDOM.render(jsxFooter, document.getElementById('footer'))
+}
+
+
 // Call render for the first time
 render();
+renderFooter();
   
