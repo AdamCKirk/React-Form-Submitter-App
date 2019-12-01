@@ -49,8 +49,9 @@ const formOne = (
         <select id="clientTitle" name="clientTitle" required >
             <option value="Mr">Mr</option>
             <option value="Mrs">Mrs</option>
+            <option value="Mx">Mx</option>
             <option value="Miss">Miss</option>
-            <option value="Dude">Dude</option>
+            <option value="Master">Master</option>
         </select>
         <input type="text" name="clientName" required ></input>
         <br></br>
