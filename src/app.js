@@ -1,6 +1,7 @@
 // import validator from 'validator';
 import React from 'react';
 import ReactDOM from 'react-dom';
+import './styles/styles.sass'
 
 // This is the projects title, change to fit needs
 const projectTitle = 'Form Submitter'
@@ -90,6 +91,7 @@ const formTwo = (
         <br></br>
         <input type="date" name="clientDoT" required ></input>
         <br></br>
+        <br></br>
         <textarea type="text" name="clientFeedback" cols="50" rows="10" defaultValue="Any feedback would be great!"></textarea>
         <br></br>
         <button>Submit</button>
@@ -109,8 +111,8 @@ const thankYou = (
 // Function renders the stage. It can be called again to refresh elements to the DOM
 const render = () => {
     const jsx = (
-        <div>
-            <h1>{projectTitle}</h1>
+        <div id='stage'>
+            <h1>{projectTitle.toUpperCase()}</h1>
 
             {visibilityStageOne && (
                 <div>
