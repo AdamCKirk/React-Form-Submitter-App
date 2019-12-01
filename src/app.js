@@ -18,9 +18,9 @@ let visibilityStageThree = false;
 
 
 // Functions that toggle each stage visibility
-const visibilityStageOneToggle = () => { visibilityStageOne = !visibilityStageOne, render()};
-const visibilityStageTwoToggle = () => { visibilityStageTwo = !visibilityStageTwo, render()};
-const visibilityStageThreeToggle = () => { visibilityStageThree = !visibilityStageThree, render()};
+const visibilityStageOneToggle = () => { visibilityStageOne = !visibilityStageOne, renderStage()};
+const visibilityStageTwoToggle = () => { visibilityStageTwo = !visibilityStageTwo, renderStage()};
+const visibilityStageThreeToggle = () => { visibilityStageThree = !visibilityStageThree, renderStage()};
 
 
 // Function to check to see if the client details are updating
@@ -54,11 +54,11 @@ const formOne = (
             <option value="Miss">Miss</option>
             <option value="Master">Master</option>
         </select>
-        <input type="text" name="clientName" required ></input>
+        <input id="clientName" type="text" name="clientName" required ></input>
         <br></br>
-        <input type="date" name="clientDoB" required ></input>
+        <input id="clientDoB" type="date" name="clientDoB" required ></input>
         <br></br>
-        <button>Next</button>
+        <button id="buttonFormOne">Next</button>
         <br></br>
     </form>
 )
@@ -87,14 +87,14 @@ const onFormTwoSubmit = (event) => {
 // formTwo
 const formTwo = (
     <form id="formTwo" onSubmit={onFormTwoSubmit}>
-        <input type="text" name="clientLocation" required ></input>
+        <input id="clientLocation" type="text" name="clientLocation" required ></input>
         <br></br>
-        <input type="date" name="clientDoT" required ></input>
+        <input id="clientDoT" type="date" name="clientDoT" required ></input>
         <br></br>
         <br></br>
-        <textarea type="text" name="clientFeedback" cols="50" rows="10" defaultValue="Any feedback would be great!"></textarea>
+        <textarea  id="clientFeedback" type="text" name="clientFeedback" cols="50" rows="10" defaultValue="Any feedback would be great!"></textarea>
         <br></br>
-        <button>Submit</button>
+        <button id="buttonFormTwo">Submit</button>
     </form>
 )
 
@@ -107,12 +107,19 @@ const thankYou = (
     </div>
 )
 
+const renderHeader = () => {
+    const jsxHeader = (
+        <div id="headerArea">
+            <h1>{projectTitle.toUpperCase()}</h1>
+        </div>
+    );
+    ReactDOM.render(jsxHeader, document.getElementById('header'))
+}
 
 // Function renders the stage. It can be called again to refresh elements to the DOM
-const render = () => {
+const renderStage = () => {
     const jsx = (
-        <div id='stage'>
-            <h1>{projectTitle.toUpperCase()}</h1>
+        <div id='stageArea'>
 
             {visibilityStageOne && (
                 <div>
@@ -134,7 +141,6 @@ const render = () => {
 
         </div>
     );
-    console.log(document)
     ReactDOM.render(jsx, document.getElementById('app'));
 };
 
@@ -150,6 +156,7 @@ const renderFooter = () => {
 
 
 // Call render for the first time
-render();
+renderHeader();
+renderStage();
 renderFooter();
   
