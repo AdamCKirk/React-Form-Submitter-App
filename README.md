@@ -24,6 +24,7 @@ Tools I used
 12. Request
 13. Google Chrome (emulator, Apple Iphone)
 14. Whiteboard (pseudo code and plan of action)
+15. Github (version control and delivery system)
 
 If given more time I would
 1. Improve graphics
