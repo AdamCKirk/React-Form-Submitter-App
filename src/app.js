@@ -59,9 +59,8 @@ const onFormOneSubmit = (event) => {
 }
 
 
-// formOne
 const formOne = (
-    <form id="formOne" onSubmit={onFormOneSubmit}>
+    <form action="/postedForms" method="post" id="formOne" onSubmit={onFormOneSubmit}>
         <select id="clientTitle" name="clientTitle" required >
             <option value="Mr">Mr</option>
             <option value="Mrs">Mrs</option>
@@ -74,10 +73,8 @@ const formOne = (
         <input id="clientDoB" type="date" name="clientDoB" required ></input>
         <br></br>
         <button id="buttonFormOne">Next</button>
-        <br></br>
     </form>
 )
-
 
 // function formTwo submission
 const onFormTwoSubmit = (event) => {
