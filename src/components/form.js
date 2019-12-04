@@ -93,32 +93,26 @@ export default class Form extends React.Component {
         return (
             <div>
                 <br></br>
-                <p>Please fill out your information below</p>
-                <br></br>
+                <h4>Please fill out your information below</h4>
                 <form action="/postedForms" method="post">
-                    <select id="clientTitle" name={this.state.title} defaultValue={this.state.title}  >
+                    <p>Title <select id="clientTitle" name={this.state.title} defaultValue={this.state.title}  >
                         <option value="Mr">Mr</option>
                         <option value="Mrs">Mrs</option>
                         <option value="Mx">Mx</option>
                         <option value="Miss">Miss</option>
                         <option value="Master">Master</option>
                     </select>
+                    </p>
                     <br></br>
-                    <p>Full Name</p>
-                    <input id="clientName"type="text" name={this.state.name} ></input>
+                    <p>Full Name <input id="clientName"type="text" name={this.state.name} ></input></p>
                     <br></br>
-                    <p>Date of Birth</p>
-                    <input id="clientDoB" type="date" name={this.state.dob}  ></input>
+                    <p>Date of Birth <input id="clientDoB" type="date" name={this.state.dob}  ></input></p>
                     <br></br>
-                    <p>Your Location</p>
-                    <input id="clientLocation" type="text" name={this.state.location} required ></input>
+                    <p>Your Location <input id="clientLocation" type="text" name={this.state.location} required ></input></p>
                     <br></br>
-                    <p>Current Date</p>
-                    <input id="clientDoT" type="date" name={this.state.dot} required ></input>
+                    <p>Current Date <input id="clientDoT" type="date" name={this.state.dot} required ></input></p>
                     <br></br>
-                    <br></br>
-                    <br></br>
-                    <p>Any Feedback?</p>
+                    <p className="feedback">Any Feedback?</p>
                     <textarea  id="clientFeedback" type="text" name={this.state.feedback} cols="50" rows="10"></textarea>
                     <br></br>
                     <br></br>
