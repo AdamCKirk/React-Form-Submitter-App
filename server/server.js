@@ -1,6 +1,9 @@
 const path = require('path');
 const express = require('express');
+const bodyParser = require('body-parser');
+
 const app = express();
+
 const publicPath = path.join(__dirname, '..', 'public');
 const request = require('request');
 
@@ -25,8 +28,14 @@ app.get('/', (req, res) => {
     res.render('index.html');
 });
 
+app.use(bodyParser.urlencoded({
+    extended: true
+}));
+
+app.use(bodyParser.json())
+
 app.post('/postedForms', (req, res) => {
-    res.send('send back a JSON object');
+    console.log(req.body)
 });
 
 app.listen(3000, () => {
