@@ -96,7 +96,7 @@ export default class Form extends React.Component {
                 <h4>Please fill out your information below</h4>
 
                 <form action="/postedForms" method="post">
-                    <p>Title <select id="clientTitle" name="title" defaultValue={this.state.title} require >
+                    <p>Title <select id="clientTitle" name="title" defaultValue={this.state.title} required >
                         <option value="Mr">Mr</option>
                         <option value="Mrs">Mrs</option>
                         <option value="Mx">Mx</option>
@@ -105,9 +105,9 @@ export default class Form extends React.Component {
                     </select>
                     </p>
                     <br></br>
-                    <p>Full Name <input id="clientName" type="text" name="name" require ></input></p>
+                    <p>Full Name <input id="clientName" type="text" name="name" required ></input></p>
                     <br></br>
-                    <p>Date of Birth <input id="clientDoB" type="date" name="dob" require ></input></p>
+                    <p>Date of Birth <input id="clientDoB" type="date" name="dob" required ></input></p>
                     <br></br>
                     <p>Your Location <input id="clientLocation" type="text" name="location" required ></input></p>
                     <br></br>
