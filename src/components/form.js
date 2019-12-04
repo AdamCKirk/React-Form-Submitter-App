@@ -96,7 +96,7 @@ export default class Form extends React.Component {
                 <h4>Please fill out your information below</h4>
 
                 <form action="/postedForms" method="post">
-                    <p>Title <select id="clientTitle" name={this.state.title} defaultValue={this.state.title} require >
+                    <p>Title <select id="clientTitle" name="title" defaultValue={this.state.title} require >
                         <option value="Mr">Mr</option>
                         <option value="Mrs">Mrs</option>
                         <option value="Mx">Mx</option>
@@ -105,16 +105,16 @@ export default class Form extends React.Component {
                     </select>
                     </p>
                     <br></br>
-                    <p>Full Name <input id="clientName"type="text" name={this.state.name} require ></input></p>
+                    <p>Full Name <input id="clientName" type="text" name="name" require ></input></p>
                     <br></br>
-                    <p>Date of Birth <input id="clientDoB" type="date" name={this.state.dob} require ></input></p>
+                    <p>Date of Birth <input id="clientDoB" type="date" name="dob" require ></input></p>
                     <br></br>
-                    <p>Your Location <input id="clientLocation" type="text" name={this.state.location} required ></input></p>
+                    <p>Your Location <input id="clientLocation" type="text" name="location" required ></input></p>
                     <br></br>
-                    <p>Current Date <input id="clientDoT" type="date" name={this.state.dot} required ></input></p>
+                    <p>Current Date <input id="clientDoT" type="date" name="dot" required ></input></p>
                     <br></br>
                     <p className="feedback">Any Feedback?</p>
-                    <textarea  id="clientFeedback" type="text" name={this.state.feedback} cols="50" rows="10"></textarea>
+                    <textarea  id="clientFeedback" type="text" name="feedback" cols="50" rows="10"></textarea>
                     <br></br>
                     <br></br>
                     <br></br>
