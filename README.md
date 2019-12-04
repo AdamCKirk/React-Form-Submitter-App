@@ -3,7 +3,7 @@
 
 I have not included the node_modules folder so in order to do so you must:
 1. Open your command console.
-2. Run command "yarn install"
+2. Run command "yarn install".
 3. Wait for the dependencies to upload.
 4. Run command "yarn run build:prod". This will run production mode and keep files light.
 5. Run command "npm start".
