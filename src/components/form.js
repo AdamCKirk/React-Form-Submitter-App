@@ -104,23 +104,26 @@ export default class Form extends React.Component {
                         <option value="Master">Master</option>
                     </select>
                     <br></br>
-                    <br></br>
+                    <p>Full Name</p>
                     <input id="clientName"type="text" name={this.state.name} ></input>
                     <br></br>
-                    <br></br>
+                    <p>Date of Birth</p>
                     <input id="clientDoB" type="date" name={this.state.dob}  ></input>
                     <br></br>
-                    <br></br>
+                    <p>Your Location</p>
                     <input id="clientLocation" type="text" name={this.state.location} required ></input>
                     <br></br>
-                    <br></br>
+                    <p>Current Date</p>
                     <input id="clientDoT" type="date" name={this.state.dot} required ></input>
                     <br></br>
                     <br></br>
+                    <br></br>
+                    <p>Any Feedback?</p>
                     <textarea  id="clientFeedback" type="text" name={this.state.feedback} cols="50" rows="10"></textarea>
                     <br></br>
                     <br></br>
-                    <button id="buttonFormOne" >Submit</button>
+                    <br></br>
+                    <button id="SubmitButton" >Submit</button>
                 </form>
             </div>
         )
