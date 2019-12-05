@@ -1,4 +1,6 @@
 import React from 'react';
+import Shape from './shape';
+//import Img from 'react-image';
 
 export default class Skill extends React.Component{
     constructor(props){
@@ -21,9 +23,10 @@ export default class Skill extends React.Component{
     render(){
         return (
             <div className="skill" onClick={this.visibilityHandle}>
-                {console.log(this.props.skillName)}
+
                 <h3>{this.props.skillName}</h3>
                 <p>{this.props.skillLevel}</p>
+                <Shape />
                 { 
                     this.state.visibility && <p>Skill Details</p>
                 }
@@ -32,3 +35,4 @@ export default class Skill extends React.Component{
         )
     }
 }
+//                //<Img src="./../images/Object-Base.png" />

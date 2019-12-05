@@ -1,3 +1,5 @@
+
+
 // library imports
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -8,6 +10,7 @@ import SkillsetDevelopment from './components/skillsetDevelopment';
 import SkillsetDesign from './components/skillsetDesign';
 import Header from './components/header';
 import Footer from './components/footer';
+//import Image from './components/image'
 
 
 // This is the projects titles, change to fit needs
