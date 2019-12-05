@@ -3,35 +3,45 @@ $secondary-color: #E6ABA1
 $tertiary-color: #FEDFB2
 // $box-color: grey
 
-#headerArea
-    position: fixed
-    background-color: $primary-color
-    top: 0%
-    width: 102%
-    text-align: center
-    font-size: 2rem
+html
+    background-color: red
+
+head
+    background-color: blue
 
 body 
     font-family: helvetica, Arial, Helvetica, sans-serif
+    background-color: grey
+    margin: 0px
+    width: 100%
+    z-index: 2
     position: fixed
-    left: -14px
-    top: 7%
-    height: 10px
-    width: 102%
 
-#stageArea
-    background-color: $secondary-color
+#header
+    background-color: $primary-color
+    position: fixed
+    top: 0
+    padding: 2%
+    width: 100%
     text-align: center
     font-size: 2rem
-    height: 1900px
-    //padding: 50px
+
+#app
+    background-color: $secondary-color
+    position: fixed
+    top: 180px
+    padding: 5%
+    width: 95%
+    height: 100%
+
 
 footer
-    position: fixed
-    left: -5px
-    text-align: center
-    font-size: 2rem
-    bottom: 0
     background-color: $tertiary-color
-    width: 102%
+    position: fixed
+    bottom: 0px
+    padding: 2%
+    width: 98%
+    text-align: center
     z-index: 2
+
+
