@@ -1,5 +1,5 @@
 {
-  "name": "form-submitter",
+  "name": "react-github-profile",
   "version": "1.0.0",
   "main": "index.js",
   "author": "Adam Charles Miller Kirk",
@@ -8,8 +8,7 @@
     "serve": "live-server public/",
     "build:dev": "webpack",
     "build:prod": "webpack -p --env production",
-    "dev-server": "webpack-dev-server",
-    "start": "node server/server.js"
+    "dev-server": "webpack-dev-server"
   },
   "dependencies": {
     "babel": "^6.23.0",
@@ -19,19 +18,18 @@
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
     "css-loader": "^3.2.0",
-    "express": "^4.17.1",
+    "konva": "^4.0.18",
     "live-server": "^1.2.1",
     "node-sass": "^4.13.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
-    "request": "^2.88.0",
+    "react-image": "^2.2.1",
+    "react-konva": "^16.10.1-0",
+    "require": "^2.4.20",
     "sass-loader": "^8.0.0",
     "style-loader": "^1.0.1",
-    "validator": "^12.1.0",
     "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10",
     "webpack-dev-server": "^3.9.0"
-  },
-  "devDependencies": {
-    "webpack-cli": "^3.3.10"
   }
 }
