@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 import './styles/styles.sass'
 
 // component imports
-import Skillset from './components/skillset'
+import Form from './components/form'
 import Header from './components/header'
 import Footer from './components/footer'
 
@@ -18,7 +18,7 @@ const footerTitle = 'I read the instructions';
 const stage = (
     <div id='stageArea'>
         <Header headerTitle={headerTitle} />
-        <Skillset />
+        <Form />
     </div>
 )
 
