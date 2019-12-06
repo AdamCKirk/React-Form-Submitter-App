@@ -32,12 +32,8 @@ app.get('/', (req, res) => {
 
 
 app.post('/postedForms', (req, res) => {
-<<<<<<< HEAD
     console.log(req.body);
     res.send('<h1>Thanks for completing this form</h1>')
-=======
-    console.log(req.body)
->>>>>>> parent of 692b867... Revert "Update server.js"
 });
 
 app.listen(3000, () => {
