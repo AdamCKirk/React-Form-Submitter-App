@@ -1,27 +1,18 @@
 // library imports
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './styles/styles.sass'
+import './styles/styles.sass';
+import Modal from 'react-modal';
 
 // component imports
-import Form from './components/form'
-import Header from './components/header'
-import Footer from './components/footer'
+import FormSubmitterApp from './components/formSubmitterApp';
+import Footer from './components/footer';
 
 
-// This is the projects titles, change to fit needs
-const headerTitle = 'Form Submitter';
+Modal.setAppElement('#app')
+
 const footerTitle = 'I read the instructions';
 
-
-// Main stage area
-const stage = (
-    <div id='stageArea'>
-        <Header headerTitle={headerTitle} />
-        <Form />
-    </div>
-)
-
 // Render elements to the html by ID
-ReactDOM.render(stage, document.getElementById('app'));
-ReactDOM.render(<Footer footerTitle={footerTitle} />, document.getElementById('footer'))
+ReactDOM.render(<FormSubmitterApp />, document.getElementById('app'));
+ReactDOM.render(<Footer footerTitle={footerTitle}/>, document.getElementById('footer'));

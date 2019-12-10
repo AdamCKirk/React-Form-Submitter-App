@@ -1,10 +1,13 @@
 import React from 'react';
+import Thanks from './thanks'
 
 // This returns a form with update methods and a submit button
 export default class Form extends React.Component {
     constructor(props){
         super(props)
         this.checkStage = this.checkStage.bind(this);
+        this.handleFormSubmit = this.handleFormSubmit.bind(this);
+        this.handleClearThanks = this.handleClearThanks.bind(this);
         this.state = {
             title: '',
             name: '',
@@ -12,7 +15,8 @@ export default class Form extends React.Component {
             location: '',
             dot: 0,
             feedback: '',
-            stageOne: false
+            stageOne: false,
+            formSubmitted:  false
         }
     }
 
@@ -25,7 +29,22 @@ export default class Form extends React.Component {
                 }
             })
         }
+    };
 
+    handleFormSubmit(e){
+        e.preventDefault();
+        console.log('clicked')
+        console.log(this.state.formSubmitted)
+        this.setState(() => ({
+            formSubmitted: true
+        }))
+    };
+
+    handleClearThanks(){
+        console.log('clear')
+        this.setState(() => ({
+            formSubmitted: false
+        }))
     }
 
     render() {
@@ -56,17 +75,21 @@ export default class Form extends React.Component {
                             <p>Current Date <input id="clientDoT" type="date" name="dot" required ></input></p>
                             <br></br>
                             <p className="feedback">Any Feedback?</p>
-                            <textarea  id="clientFeedback" type="text" name="feedback" cols="50" rows="10"></textarea>
+                            <textarea  id="clientFeedback" type="text" name="feedback" cols="50" rows="6"></textarea>
                             <br></br>
                             <br></br>
                             <br></br>
-                            <button id="SubmitButton" >Submit</button>
+                            <button id="SubmitButton" onClick={this.handleFormSubmit}>Submit</button>
                         </div>
                         )
                     }
-
                 </form>
+                <Thanks 
+                    formSubmitted={this.state.formSubmitted}
+                    handleClearThanks={this.handleClearThanks}
+                />
             </div>
         )
     }
 }
+//<form action="/postedForms" method="post">

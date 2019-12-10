@@ -33,7 +33,6 @@ app.get('/', (req, res) => {
 
 app.post('/postedForms', (req, res) => {
     console.log(req.body);
-    res.send('<h1>Thanks for completing this form</h1>')
 });
 
 app.listen(3000, () => {
