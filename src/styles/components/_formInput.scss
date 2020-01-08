@@ -1,0 +1,23 @@
+
+.inputBasic {
+    background-color: $dark-color;
+    display: flex;
+    justify-content: space-evenly;
+    padding: $s-size 0;
+    border-bottom: 1px solid #f2f2f2;
+}
+
+.inputBasic__name {
+    font-weight: bold;
+    text-align: right;
+    width: 20rem;
+}
+
+.inputBasic__input {
+    background-color: $base-color;
+    border: none;
+    color: white;
+    flex-grow: 1;
+    margin: 0 $s-size;
+    padding: 0 0 0 1rem;
+}

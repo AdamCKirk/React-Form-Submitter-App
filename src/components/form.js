@@ -1,6 +1,11 @@
 import React from 'react';
 import Thanks from './Thanks'
-import FormTextBox from './FormTextBox';
+import FormButton from './FormButton';
+import FormInputDate from './FormInputDate';
+import FormInputDropdown from './FormInputDropdown';
+import FormInputText from './FormInputText';
+import FormInputTextbox from './FormInputTextbox';
+import FormTitle from './FormTitle';
 
 
 // This returns a form with update methods and a submit button
@@ -17,14 +22,14 @@ export default class Form extends React.Component {
             location: '',
             dot: 0,
             feedback: '',
-            stageOne: true,
+            stageOne: false,
             formSubmitted:  false
         }
     }
 
     checkStage() {
         console.log(this.state.stageOne)
-        if(!!clientTitle.value & !!clientName.value & !!clientDoB.value){
+        if(!!this.state.title & !!this.state.name & !!this.state.dob){
             this.setState(() => {
                 return {
                     stageOne: true
@@ -52,27 +57,18 @@ export default class Form extends React.Component {
     render() {
         return (
             <div>
-                <h4>Please fill out your information below</h4>
-
                 <form action="/postedForms" method="post">
-                    <p>Title <select id="clientTitle" name="title" onChange={this.checkStage} required >
-                        <option value="Mr">Mr</option>
-                        <option value="Mrs">Mrs</option>
-                        <option value="Mx">Mx</option>
-                        <option value="Miss">Miss</option>
-                        <option value="Master">Master</option>
-                    </select>
-                    </p>
-                    <p>Full Name <input id="clientName" type="text" name="name" onChange={this.checkStage} required ></input></p>
-                    <p>Date of Birth <input id="clientDoB" type="date" name="dob" onChange={this.checkStage} required ></input></p>
+                    <FormTitle />
+                    <FormInputDropdown name={"Title:"} valueID={"title"} checkStage={this.checkStage}/>
+                    <FormInputText name={"Full Name:"} valueID={"name"} checkStage={this.checkStage}/>
+                    <FormInputDate name={"Date:"} valueID={"dob"} checkStage={this.checkStage}/>
                     {
                         this.state.stageOne && (
                             <div>
-                            <p>Your Location <input id="clientLocation" type="text" name="location" required ></input></p>
-                            <p>Current Date <input id="clientDoT" type="date" name="dot" required ></input></p>
-                            <p className="feedback">Any Feedback?</p>
-                            <FormTextBox />
-                            <button>Submit</button>
+                            <FormInputText name={"Your Location:"} valueID={"location"} />
+                            <FormInputDate name={"Today:"} valueID={"dot"} />
+                            <FormInputTextbox name={"Feedback:"} valueID={"feedback"}  />
+                            <FormButton />
                         </div>
                         )
                     }
@@ -85,5 +81,4 @@ export default class Form extends React.Component {
         )
     }
 }
-//<form action="/postedForms" method="post">
 //<button id="SubmitButton" onClick={this.handleFormSubmit}>Submit</button>

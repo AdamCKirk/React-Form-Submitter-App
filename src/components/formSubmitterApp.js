@@ -6,13 +6,9 @@ import Footer from './Footer';
 import Form from './Form';
 import Header from './Header';
 
-
-
 // This is the projects titles, change to fit needs
 const title = 'Form Submitter';
-const footerTitle = 'I read the instructions';
-
-
+const footerTitle = 'Created by Adam Miller-Kirk';
 
 // Main stage area
 export default class FormSubmitterApp extends React.Component {
