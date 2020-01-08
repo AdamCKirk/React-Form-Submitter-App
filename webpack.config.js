@@ -20,7 +20,7 @@ module.exports = (env) => {
                     'css-loader',
                     'sass-loader'
                 ],
-                test: /\.sass$/
+                test: /\.s?css$/
             }]
         },
         devtool: isProduction ? 'source-map' : 'cheap-module-eval-source-map',

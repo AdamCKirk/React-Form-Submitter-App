@@ -2,12 +2,15 @@
 import React from 'react';
 
 // component imports
-import Form from './form';
-import Header from './header';
+import Footer from './Footer';
+import Form from './Form';
+import Header from './Header';
+
 
 
 // This is the projects titles, change to fit needs
-const headerTitle = 'Form Submitter';
+const title = 'Form Submitter';
+const footerTitle = 'I read the instructions';
 
 
 
@@ -15,10 +18,14 @@ const headerTitle = 'Form Submitter';
 export default class FormSubmitterApp extends React.Component {
     render(){
         return (
-            <div id='stageArea'>
-                <Header headerTitle={headerTitle} />
-                <Form />
+            <div>
+                <Header title={title} />
+                <div className="container">
+                    <Form />
+                </div>
+                <Footer footerTitle={footerTitle} />
             </div>
+            
         )
     }
 }

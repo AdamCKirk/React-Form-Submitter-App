@@ -1,8 +1,6 @@
 import React from 'react';
 import Modal from 'react-modal';
 
-//Modal.setAppElement(el);
-
 const Thankyou = (props) => (
     <div>
     <Modal

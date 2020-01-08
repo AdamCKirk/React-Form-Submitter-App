@@ -1,12 +1,16 @@
 import React from 'react';
 
-// This returns a p element for the footer of the app
-export default class Footer extends React.Component{
-    render(){
-        return (
-            <div>
-                <p>{this.props.footerTitle}</p>
-            </div>
-        )
-    }
-}
+const Footer = (props) => (
+    <div className="footer">
+        <div className="container">
+            <h3 className="footer__title">{props.footerTitle}</h3>  
+        </div>
+    </div>
+)
+
+//Default props for header
+Footer.defaultProps = {
+    title: 'Footer',
+};
+
+export default Footer;
