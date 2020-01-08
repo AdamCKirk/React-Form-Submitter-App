@@ -26,8 +26,7 @@ Tools I used
 14. Whiteboard (pseudo code and plan of action)
 15. Github (version control and delivery system)
 
-If given more time I would
+Future changes to come
 1. Improve graphics
-2. Enforce input restrictions such as format type and details using validator
-3. Setup a better post request that logs the JSON object to the console command
-4. Add further responsive design and a website layout
+2. Replace date input with b&b date picker
+3. Improve layout
