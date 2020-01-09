@@ -8,28 +8,20 @@ import FormInputTextbox from './FormInputTextbox';
 import FormTitle from './FormTitle';
 
 
-// This returns a form with update methods and a submit button
+// This returns a form shell, it pulls in form components if needed
 export default class Form extends React.Component {
     constructor(props){
         super(props)
         this.checkStage = this.checkStage.bind(this);
-        this.handleFormSubmit = this.handleFormSubmit.bind(this);
-        this.handleClearThanks = this.handleClearThanks.bind(this);
         this.state = {
-            title: '',
-            name: '',
-            dob: 0,
-            location: '',
-            dot: 0,
-            feedback: '',
             stageOne: false,
-            formSubmitted:  false
         }
     }
 
     checkStage() {
         console.log(this.state.stageOne)
-        if(!!this.state.title & !!this.state.name & !!this.state.dob){
+        console.log(nameClient.value)
+        if(!!titleClient.value & !!nameClient.value & !!dobClient.value){
             this.setState(() => {
                 return {
                     stageOne: true
@@ -37,22 +29,6 @@ export default class Form extends React.Component {
             })
         }
     };
-
-    handleFormSubmit(e){
-        e.preventDefault();
-        console.log('clicked')
-        console.log(this.state.formSubmitted)
-        this.setState(() => ({
-            formSubmitted: true
-        }))
-    };
-
-    handleClearThanks(){
-        console.log('clear')
-        this.setState(() => ({
-            formSubmitted: false
-        }))
-    }
 
     render() {
         return (
@@ -80,5 +56,4 @@ export default class Form extends React.Component {
             </div>
         )
     }
-}
-//<button id="SubmitButton" onClick={this.handleFormSubmit}>Submit</button>
+};

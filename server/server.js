@@ -16,11 +16,9 @@ request(url,function(err, response, body){
     }
 });
 
-
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(publicPath));
-
 
 app.get('*', (req, res) => {
     res.sendFile(path.join(publicPath), 'index.html');
@@ -29,7 +27,6 @@ app.get('*', (req, res) => {
 app.get('/', (req, res) => {
     res.render('index.html');
 });
-
 
 app.post('/postedForms', (req, res) => {
     console.log(req.body);

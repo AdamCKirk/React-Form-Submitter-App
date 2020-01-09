@@ -3,7 +3,13 @@ import React from 'react';
 const FormInputDropdown = (props) => (
     <div className="inputBasic">
         <p className="inputBasic__name">{props.name}</p>
-        <select className="inputBasic__input" name={props.valueID} onChange={props.checkStage} required >
+        <select 
+            id={props.valueID + "Client"}
+            className="inputBasic__input"
+            name={props.valueID}
+            onChange={props.checkStage}
+            required
+        >
             <option value="Mr">Mr</option>
             <option value="Mrs">Mrs</option>
             <option value="Mx">Mx</option>
