@@ -1,0 +1,27 @@
+.pageSubmitted {
+    background-color: $dark-color;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pageSubmitted__title {
+    font-weight: bold;
+    margin: 1rem;
+}
+
+.pageSubmitted__description {
+    margin: 1rem;
+}
+
+.pageSubmitted__tab {
+    background-color: $light-color;
+    border-bottom: 1px solid #333;
+    color: #333;
+    font-weight: bold;
+    width: 15rem;
+    padding: $s-size;
+    margin: 1rem;
+    text-align: center;
+    cursor: pointer;
+}
