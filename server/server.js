@@ -1,12 +1,11 @@
-const express = require('express');
-const bodyParser = require('body-parser');
 const path = require('path');
-const app = express();
-
-const publicPath = path.join(__dirname, '..', 'public');
+const express = require('express');
 const request = require('request');
 
-let url = 'http://localhost:3000/';
+const app = express();
+const publicPath = path.join(__dirname, '../', 'public');
+
+let url = 'localhost:3000/';
 
 request(url,function(err, response, body){
     if(err){
@@ -21,7 +20,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static(publicPath));
 
 app.get('*', (req, res) => {
-    res.sendFile(path.join(publicPath), 'index.html');
+    res.sendFile(path.join(publicPath, 'index.html'));
 });
 
 app.get('/', (req, res) => {
@@ -30,8 +29,10 @@ app.get('/', (req, res) => {
 
 app.post('/postedForms', (req, res) => {
     console.log(req.body);
+    res.redirect('/postedForms')
 });
 
 app.listen(3000, () => {
     console.log('Server is up and running');
 });
+

@@ -1,5 +1,4 @@
 import React from 'react';
-import Thanks from './Thanks'
 import FormButton from './FormButton';
 import FormInputDate from './FormInputDate';
 import FormInputDropdown from './FormInputDropdown';
@@ -49,10 +48,6 @@ export default class Form extends React.Component {
                         )
                     }
                 </form>
-                <Thanks 
-                    formSubmitted={this.state.formSubmitted}
-                    handleClearThanks={this.handleClearThanks}
-                />
             </div>
         )
     }
