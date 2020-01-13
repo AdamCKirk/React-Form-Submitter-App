@@ -33,6 +33,6 @@ app.post('/postedForms', (req, res) => {
 });
 
 app.listen(3000, () => {
-    console.log('Server is up and running');
+    console.log(`Server is up and running on ${url}`);
 });
 

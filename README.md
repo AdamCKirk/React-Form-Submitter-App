@@ -19,14 +19,13 @@ Tools I used
 6. Webpack
 7. Yarn
 8. Babel
-9. Live-server
-10. Normalize
-11. NodeJS
-12. ExpressJS
-13. Request
-14. Google Chrome (emulator, Apple Iphone)
-15. Whiteboard (pseudo code and plan of action)
-16. Github (version control and delivery system)
+9. Normalize
+10. NodeJS
+11. ExpressJS
+12. Request
+13. Google Chrome (emulator, Apple Iphone)
+14. Whiteboard (pseudo code and plan of action)
+15. Github (version control and delivery system)
 
 Future changes to come
 1. Replace date input with b&b date picker
