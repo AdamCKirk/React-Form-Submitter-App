@@ -32,7 +32,7 @@ export default class Form extends React.Component {
     render() {
         return (
             <div>
-                <form action="/postedForms" method="post">
+                <form className="form" action="/postedForms" method="post">
                     <FormTitle />
                     <FormInputDropdown name={"Title:"} valueID={"title"} checkStage={this.checkStage}/>
                     <FormInputText name={"Full Name:"} valueID={"name"} checkStage={this.checkStage}/>
